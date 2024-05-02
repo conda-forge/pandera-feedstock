@@ -53,14 +53,14 @@ Current release info
 Installing pandera
 ==================
 
-Installing `pandera` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `pandera` from the `conda-forge/label/pandera_dev` channel can be achieved by adding `conda-forge/label/pandera_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/pandera_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pandera, pandera-base, pandera-dask, pandera-fastapi, pandera-geopandas, pandera-hypotheses, pandera-io, pandera-modin, pandera-modin-dask, pandera-modin-ray, pandera-mypy, pandera-pyspark, pandera-strategies` can be installed with `conda`:
+Once the `conda-forge/label/pandera_dev` channel has been enabled, `pandera, pandera-base, pandera-dask, pandera-fastapi, pandera-geopandas, pandera-hypotheses, pandera-io, pandera-modin, pandera-modin-dask, pandera-modin-ray, pandera-mypy, pandera-pyspark, pandera-strategies` can be installed with `conda`:
 
 ```
 conda install pandera pandera-base pandera-dask pandera-fastapi pandera-geopandas pandera-hypotheses pandera-io pandera-modin pandera-modin-dask pandera-modin-ray pandera-mypy pandera-pyspark pandera-strategies
@@ -75,26 +75,26 @@ mamba install pandera pandera-base pandera-dask pandera-fastapi pandera-geopanda
 It is possible to list all of the versions of `pandera` available on your platform with `conda`:
 
 ```
-conda search pandera --channel conda-forge
+conda search pandera --channel conda-forge/label/pandera_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search pandera --channel conda-forge
+mamba search pandera --channel conda-forge/label/pandera_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search pandera --channel conda-forge
+mamba repoquery search pandera --channel conda-forge/label/pandera_dev
 
 # List packages depending on `pandera`:
-mamba repoquery whoneeds pandera --channel conda-forge
+mamba repoquery whoneeds pandera --channel conda-forge/label/pandera_dev
 
 # List dependencies of `pandera`:
-mamba repoquery depends pandera --channel conda-forge
+mamba repoquery depends pandera --channel conda-forge/label/pandera_dev
 ```
 
 
