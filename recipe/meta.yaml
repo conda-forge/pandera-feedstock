@@ -10,7 +10,7 @@ source:
   sha256: 154231780643bc73b121bd976b0ada9dcebb3e065c622954fd099dc299cf44bd
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: pandera-base
@@ -27,9 +27,7 @@ outputs:
         - pip
       run:
         - python >={{ python_min }}
-        - numpy >=1.24.4
         - packaging >=20.0
-        - pandas >=2.1.1
         - pydantic
         - typeguard
         - typing_inspect >=0.6.0
@@ -57,6 +55,24 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+
+  - name: pandera-pandas
+    build:
+      noarch: generic
+    test:
+      requires:
+        - pip
+        - python {{ python_min }}
+      imports:
+        - pandera
+        - pandera.pandas
+      commands:
+        - pip check
+    requirements:
+      run:
+        - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+        - pandas >=2.1.1
+        - numpy >=1.24.4
 
   - name: pandera-strategies
     build:
