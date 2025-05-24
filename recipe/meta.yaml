@@ -55,6 +55,8 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+        - pandas >=2.1.1
+        - numpy >=1.24.4
 
   - name: pandera-pandas
     build:
