@@ -90,7 +90,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera', max_pin="x.x.x") }}
         - hypothesis >=6.92.7
 
   - name: pandera-hypotheses
@@ -107,7 +107,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera', max_pin="x.x.x") }}
         - scipy
 
   - name: pandera-io
@@ -124,7 +124,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera', max_pin="x.x.x") }}
         - pyyaml >=5.1
         - black
         - frictionless <=4.40.8
@@ -251,7 +251,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera', max_pin="x.x.x") }}
         - mypy
         - pandas-stubs
 
@@ -269,7 +269,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera', max_pin="x.x.x") }}
         - fastapi
 
   - name: pandera-geopandas
@@ -286,7 +286,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera', max_pin="x.x.x") }}
         - geopandas
         - shapely
 
