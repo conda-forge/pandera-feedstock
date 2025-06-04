@@ -10,7 +10,7 @@ source:
   sha256: 154231780643bc73b121bd976b0ada9dcebb3e065c622954fd099dc299cf44bd
 
 build:
-  number: 1
+  number: 2
 
 outputs:
   - name: pandera-base
@@ -54,7 +54,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera-base', exact=True) }}
         - pandas >=2.1.1
         - numpy >=1.24.4
 
@@ -72,7 +72,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera-base', exact=True) }}
         - pandas >=2.1.1
         - numpy >=1.24.4
 
@@ -90,7 +90,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera', exact=True) }}
         - hypothesis >=6.92.7
 
   - name: pandera-hypotheses
@@ -107,7 +107,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera', exact=True) }}
         - scipy
 
   - name: pandera-io
@@ -124,7 +124,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera', exact=True) }}
         - pyyaml >=5.1
         - black
         - frictionless <=4.40.8
@@ -143,7 +143,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera-base', exact=True) }}
         - polars >=0.20.0
 
   - name: pandera-pyspark
@@ -161,7 +161,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera-base', exact=True) }}
         - pyspark >=3.2.0
 
   - name: pandera-modin
@@ -179,7 +179,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera-base', exact=True) }}
         - modin
 
   - name: pandera-modin-ray
@@ -197,7 +197,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera-base', exact=True) }}
         - modin-ray
 
   - name: pandera-modin-dask
@@ -215,7 +215,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera-base', exact=True) }}
         - modin-dask
 
   - name: pandera-dask
@@ -233,7 +233,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera-base', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera-base', exact=True) }}
         - dask
         - distributed
 
@@ -251,7 +251,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera', exact=True) }}
         - mypy
         - pandas-stubs
 
@@ -269,7 +269,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera', exact=True) }}
         - fastapi
 
   - name: pandera-geopandas
@@ -286,7 +286,7 @@ outputs:
         - pip check
     requirements:
       run:
-        - {{ pin_subpackage('pandera', max_pin="x.x.x") }}
+        - {{ pin_subpackage('pandera', exact=True) }}
         - geopandas
         - shapely
 
