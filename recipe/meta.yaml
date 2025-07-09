@@ -162,7 +162,7 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage('pandera-base', exact=True) }}
-        - pyspark >=3.2.0
+        - pyspark >=3.2.0,<4
 
   - name: pandera-modin
     build:
@@ -287,7 +287,7 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage('pandera', exact=True) }}
-        - geopandas
+        - geopandas <1.1.0
         - shapely
 
 about:
