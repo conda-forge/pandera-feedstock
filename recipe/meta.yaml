@@ -10,7 +10,7 @@ source:
   sha256: af3bbaa163672c91b83d59d70715f25c4134dbccfc8bc89a642a2f0e23db951e
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: pandera-base
@@ -163,6 +163,23 @@ outputs:
       run:
         - {{ pin_subpackage('pandera-base', exact=True) }}
         - pyspark >=3.2.0,<4
+
+  - name: pandera-ibis
+    build:
+      noarch: generic
+    test:
+      requires:
+        - pip
+        - python {{ python_min }}
+      imports:
+        - pandera.ibis
+        - pandera.typing.ibis
+      commands:
+        - pip check
+    requirements:
+      run:
+        - {{ pin_subpackage('pandera-base', exact=True) }}
+        - ibis-framework >=9.0.0
 
   - name: pandera-modin
     build:
