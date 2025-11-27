@@ -1,6 +1,6 @@
 {% set name = "pandera" %}
-{% set version = "0.26.1" %}
-{% set python_min = "3.9" %}
+{% set version = "0.27.0" %}
+{% set python_min = "3.10" %}
 {% set python_min_ibis = "3.10" %}
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 81a55a6429770d31b3bf4c3e8e1096a38296bd3009f9eca5780fad3c3c17fd82
+  sha256: 83c66d5896b97b3a91c810621038d2495f56c83864493819e7587d2059e641ad
 
 build:
   number: 0
