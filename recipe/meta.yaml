@@ -128,8 +128,6 @@ outputs:
       run:
         - {{ pin_subpackage('pandera', exact=True) }}
         - pyyaml >=5.1
-        - black
-        - frictionless <=4.40.8
 
   - name: pandera-polars
     build:
