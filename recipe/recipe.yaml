@@ -13,7 +13,7 @@ source:
   sha256: 06bc4fc1e4ff02534dd44482a9bc704fb2e58fe3fbb11be906aa714f7f5ec801
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - package:
@@ -33,6 +33,7 @@ outputs:
         - packaging >=20.0
         - pydantic
         - typeguard
+        - typing_extensions
         - typing_inspect >=0.6.0
     tests:
       - python:
