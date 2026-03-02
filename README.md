@@ -17,7 +17,6 @@ A simple, zero-configuration Python library to help you build
 confidence in the quality of your dataframe-like containers through
 data validation and property-based testing.
 
-
 Current build status
 ====================
 
