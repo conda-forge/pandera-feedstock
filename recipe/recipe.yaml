@@ -266,7 +266,7 @@ outputs:
     requirements:
       run:
         - ${{ pin_subpackage('pandera', exact=True) }}
-        - geopandas <1.1.0
+        - geopandas
         - shapely
     tests:
       - python:
