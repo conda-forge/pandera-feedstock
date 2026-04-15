@@ -275,6 +275,23 @@ outputs:
             - pandera.typing.geopandas
           pip_check: true
           python_version: ${{ python_min }}.*
+  - package:
+      name: pandera-xarray
+    build:
+      noarch: generic
+    requirements:
+      run:
+        - ${{ pin_subpackage('pandera', exact=True) }}
+        - xarray >= 2024.10.0
+        - numpy >= 1.24.4
+    tests:
+      - python:
+          imports:
+            - pandera
+            - pandera.xarray
+            - pandera.typing.xarray
+          pip_check: true
+          python_version: ${{ python_min }}.*
 
 about:
   license: MIT
