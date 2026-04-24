@@ -50,6 +50,7 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pandera--polars-green.svg)](https://anaconda.org/conda-forge/pandera-polars) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pandera-polars.svg)](https://anaconda.org/conda-forge/pandera-polars) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pandera-polars.svg)](https://anaconda.org/conda-forge/pandera-polars) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pandera-polars.svg)](https://anaconda.org/conda-forge/pandera-polars) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pandera--pyspark-green.svg)](https://anaconda.org/conda-forge/pandera-pyspark) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pandera-pyspark.svg)](https://anaconda.org/conda-forge/pandera-pyspark) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pandera-pyspark.svg)](https://anaconda.org/conda-forge/pandera-pyspark) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pandera-pyspark.svg)](https://anaconda.org/conda-forge/pandera-pyspark) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pandera--strategies-green.svg)](https://anaconda.org/conda-forge/pandera-strategies) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pandera-strategies.svg)](https://anaconda.org/conda-forge/pandera-strategies) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pandera-strategies.svg)](https://anaconda.org/conda-forge/pandera-strategies) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pandera-strategies.svg)](https://anaconda.org/conda-forge/pandera-strategies) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pandera--xarray-green.svg)](https://anaconda.org/conda-forge/pandera-xarray) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pandera-xarray.svg)](https://anaconda.org/conda-forge/pandera-xarray) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pandera-xarray.svg)](https://anaconda.org/conda-forge/pandera-xarray) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pandera-xarray.svg)](https://anaconda.org/conda-forge/pandera-xarray) |
 
 Installing pandera
 ==================
@@ -61,16 +62,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pandera, pandera-base, pandera-dask, pandera-fastapi, pandera-geopandas, pandera-hypotheses, pandera-ibis, pandera-io, pandera-modin, pandera-modin-dask, pandera-modin-ray, pandera-mypy, pandera-pandas, pandera-polars, pandera-pyspark, pandera-strategies` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `pandera, pandera-base, pandera-dask, pandera-fastapi, pandera-geopandas, pandera-hypotheses, pandera-ibis, pandera-io, pandera-modin, pandera-modin-dask, pandera-modin-ray, pandera-mypy, pandera-pandas, pandera-polars, pandera-pyspark, pandera-strategies, pandera-xarray` can be installed with `conda`:
 
 ```
-conda install pandera pandera-base pandera-dask pandera-fastapi pandera-geopandas pandera-hypotheses pandera-ibis pandera-io pandera-modin pandera-modin-dask pandera-modin-ray pandera-mypy pandera-pandas pandera-polars pandera-pyspark pandera-strategies
+conda install pandera pandera-base pandera-dask pandera-fastapi pandera-geopandas pandera-hypotheses pandera-ibis pandera-io pandera-modin pandera-modin-dask pandera-modin-ray pandera-mypy pandera-pandas pandera-polars pandera-pyspark pandera-strategies pandera-xarray
 ```
 
 or with `mamba`:
 
 ```
-mamba install pandera pandera-base pandera-dask pandera-fastapi pandera-geopandas pandera-hypotheses pandera-ibis pandera-io pandera-modin pandera-modin-dask pandera-modin-ray pandera-mypy pandera-pandas pandera-polars pandera-pyspark pandera-strategies
+mamba install pandera pandera-base pandera-dask pandera-fastapi pandera-geopandas pandera-hypotheses pandera-ibis pandera-io pandera-modin pandera-modin-dask pandera-modin-ray pandera-mypy pandera-pandas pandera-polars pandera-pyspark pandera-strategies pandera-xarray
 ```
 
 It is possible to list all of the versions of `pandera` available on your platform with `conda`:
