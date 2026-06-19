@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pandera
-  version: "0.31.1"
+  version: "0.32.0"
 
 recipe:
   name: pandera-suite
@@ -10,7 +10,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: c75aa3868af15d4f9aa613acf1a7f436a518f81f1eb658ad630c1dbe1dab0f13
+  sha256: 070c705eafbcfb4dd2ce494154d4bc0ce6d2b8e02a95ae15234040683bbab1f5
 
 build:
   number: 0
