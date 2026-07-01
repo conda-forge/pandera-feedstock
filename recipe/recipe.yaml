@@ -292,6 +292,22 @@ outputs:
             - pandera.typing.xarray
           pip_check: true
           python_version: ${{ python_min }}.*
+  - package:
+      name: pandera-narwhals
+    build:
+      noarch: generic
+    requirements:
+      run:
+        - ${{ pin_subpackage('pandera', exact=True) }}
+        - narwhals >= 1.26.0
+    tests:
+      - python:
+          imports:
+            - pandera
+            - pandera.api.narwhals
+            - pandera.backends.narwhals
+          pip_check: true
+          python_version: ${{ python_min }}.*
 
 about:
   license: MIT
