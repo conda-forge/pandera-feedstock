@@ -124,7 +124,7 @@ outputs:
     requirements:
       run:
         - ${{ pin_subpackage('pandera-base', exact=True) }}
-        - polars >=0.20.0
+        - polars >=1.20.0
     tests:
       - python:
           imports:
@@ -140,6 +140,8 @@ outputs:
       run:
         - ${{ pin_subpackage('pandera-base', exact=True) }}
         - ibis-framework >=9.0.0
+        - pyarrow-hotfix
+        - python-tzdata
     tests:
       - python:
           imports:
