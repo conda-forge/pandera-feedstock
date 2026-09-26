@@ -40,7 +40,9 @@ outputs:
           imports:
             - pandera
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera
     build:
@@ -55,7 +57,9 @@ outputs:
           imports:
             - pandera
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera-pandas
     build:
@@ -71,7 +75,9 @@ outputs:
             - pandera
             - pandera.pandas
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera-strategies
     build:
@@ -86,7 +92,9 @@ outputs:
             - pandera
             - pandera.strategies
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera-hypotheses
     build:
@@ -101,7 +109,9 @@ outputs:
             - pandera
             - pandera.api.hypotheses
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera-io
     build:
@@ -116,7 +126,9 @@ outputs:
             - pandera
             - pandera.io
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera-polars
     build:
@@ -131,7 +143,9 @@ outputs:
             - pandera
             - pandera.typing.polars
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera-ibis
     build:
@@ -148,7 +162,9 @@ outputs:
             - pandera.ibis
             - pandera.typing.ibis
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera-pyspark
     build:
@@ -164,7 +180,9 @@ outputs:
             - pandera.accessors.pyspark_accessor
             - pandera.typing.pyspark
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera-modin
     build:
@@ -180,7 +198,9 @@ outputs:
             - pandera.accessors.modin_accessor
             - pandera.typing.modin
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera-modin-ray
     build:
@@ -196,7 +216,9 @@ outputs:
             - pandera.accessors.modin_accessor
             - pandera.typing.modin
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera-modin-dask
     build:
@@ -212,7 +234,9 @@ outputs:
             - pandera.accessors.modin_accessor
             - pandera.typing.modin
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera-dask
     build:
@@ -229,7 +253,9 @@ outputs:
             - pandera.accessors.dask_accessor
             - pandera.typing.dask
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera-mypy
     build:
@@ -245,7 +271,9 @@ outputs:
             - pandera
             - pandera.mypy
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera-fastapi
     build:
@@ -260,7 +288,9 @@ outputs:
             - pandera
             - pandera.typing.fastapi
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera-geopandas
     build:
@@ -276,7 +306,9 @@ outputs:
             - pandera
             - pandera.typing.geopandas
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera-xarray
     build:
@@ -293,7 +325,9 @@ outputs:
             - pandera.xarray
             - pandera.typing.xarray
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
   - package:
       name: pandera-narwhals
     build:
@@ -309,7 +343,9 @@ outputs:
             - pandera.api.narwhals
             - pandera.backends.narwhals
           pip_check: true
-          python_version: ${{ python_min }}.*
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
 
 about:
   license: MIT
