@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pandera
-  version: "0.34.1"
+  version: "0.36.0"
 
 recipe:
   name: pandera-suite
@@ -10,7 +10,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 8907a976403757c5e05a73022d4c447c74844d01c6053667b9a2ca63f26c2fa6
+  sha256: 70194c6c9c8e3e950d62d9018d1fa6ba2b4371d1abc62c124574173f71432d80
 
 build:
   number: 0
@@ -173,6 +173,9 @@ outputs:
       run:
         - ${{ pin_subpackage('pandera-base', exact=True) }}
         - pyspark >=3.2.0
+        # pyspark.pandas is not compatible with pandas >= 3.0 (pandas.tseries.frequencies.DateOffset
+        # was removed), and the pandera pyspark accessor imports pyspark.pandas.
+        - pandas < 3.0.0
     tests:
       - python:
           imports:
@@ -342,6 +345,23 @@ outputs:
             - pandera
             - pandera.api.narwhals
             - pandera.backends.narwhals
+          pip_check: true
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
+  - package:
+      name: pandera-decisions
+    build:
+      noarch: generic
+    requirements:
+      run:
+        - ${{ pin_subpackage('pandera', exact=True) }}
+        - typesafe-sdk
+    tests:
+      - python:
+          imports:
+            - pandera
+            - pandera.decisions
           pip_check: true
           python_version:
             - ${{ python_min }}.*
